@@ -12,6 +12,8 @@
 		CD0A61CD1E7D312500C72205 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0A61CB1E7D312500C72205 /* Main.storyboard */; };
 		CD0A61CF1E7D312500C72205 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0A61CE1E7D312500C72205 /* Assets.xcassets */; };
 		CD0A61D21E7D312500C72205 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0A61D01E7D312500C72205 /* LaunchScreen.storyboard */; };
+		CD0A61DA1E7D408A00C72205 /* DictTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A61D91E7D408A00C72205 /* DictTableViewController.swift */; };
+		CD0A61DC1E7D4FAE00C72205 /* MyData.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD0A61DB1E7D4FAE00C72205 /* MyData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		CD0A61CE1E7D312500C72205 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD0A61D11E7D312500C72205 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD0A61D31E7D312500C72205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0A61D91E7D408A00C72205 /* DictTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictTableViewController.swift; sourceTree = "<group>"; };
+		CD0A61DB1E7D4FAE00C72205 /* MyData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MyData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				CD0A61C71E7D312500C72205 /* AppDelegate.swift */,
 				CD0A61C91E7D312500C72205 /* ViewController.swift */,
+				CD0A61D91E7D408A00C72205 /* DictTableViewController.swift */,
+				CD0A61DB1E7D4FAE00C72205 /* MyData.plist */,
 				CD0A61CB1E7D312500C72205 /* Main.storyboard */,
 				CD0A61CE1E7D312500C72205 /* Assets.xcassets */,
 				CD0A61D01E7D312500C72205 /* LaunchScreen.storyboard */,
@@ -126,6 +132,7 @@
 			files = (
 				CD0A61D21E7D312500C72205 /* LaunchScreen.storyboard in Resources */,
 				CD0A61CF1E7D312500C72205 /* Assets.xcassets in Resources */,
+				CD0A61DC1E7D4FAE00C72205 /* MyData.plist in Resources */,
 				CD0A61CD1E7D312500C72205 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 			files = (
 				CD0A61CA1E7D312500C72205 /* ViewController.swift in Sources */,
 				CD0A61C81E7D312500C72205 /* AppDelegate.swift in Sources */,
+				CD0A61DA1E7D408A00C72205 /* DictTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

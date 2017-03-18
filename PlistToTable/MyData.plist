@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SamsungDevice</key>
+	<array>
+		<string>Galaxy Phone</string>
+		<string>Edge Phone</string>
+		<string>Galaxy Tab</string>
+		<string>Gear Watch</string>
+		<string>Low Cost Phones</string>
+	</array>
+	<key>AppleDevice</key>
+	<array>
+		<string>iPhone</string>
+		<string>Mac</string>
+		<string>iPad</string>
+		<string>MacBookPro</string>
+		<string>Apple Watch</string>
+		<string>Apple TV</string>
+	</array>
+</dict>
+</plist>

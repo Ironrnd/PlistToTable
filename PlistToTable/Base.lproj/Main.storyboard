@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlistToTable" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,74 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nf-y7-94q">
+                                <rect key="frame" x="123" y="377" width="129" height="30"/>
+                                <state key="normal" title="Показать таблицу"/>
+                                <connections>
+                                    <action selector="showTable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XWI-Q7-43e"/>
+                                    <segue destination="2Ao-tJ-W4l" kind="show" identifier="ShowTableSegue" id="gda-EB-7RJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет данных" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdp-ld-1kU">
+                                <rect key="frame" x="121.5" y="57" width="131.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azr-13-Bcu">
+                                <rect key="frame" x="123" y="277" width="130" height="30"/>
+                                <state key="normal" title="Загрузить данные"/>
+                                <connections>
+                                    <action selector="loadData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7xe-8t-hn3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6nf-y7-94q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="59o-W7-WSB"/>
+                            <constraint firstItem="Tdp-ld-1kU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="BKG-b5-LUX"/>
+                            <constraint firstItem="Tdp-ld-1kU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Btx-Fn-SdE"/>
+                            <constraint firstItem="azr-13-Bcu" firstAttribute="top" secondItem="Tdp-ld-1kU" secondAttribute="bottom" constant="191" id="EWz-Sf-Q9j"/>
+                            <constraint firstItem="6nf-y7-94q" firstAttribute="top" secondItem="azr-13-Bcu" secondAttribute="bottom" constant="70" id="Imt-zR-lL3"/>
+                            <constraint firstItem="azr-13-Bcu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="loF-AD-1Ln"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dalaLabel" destination="Tdp-ld-1kU" id="pVH-kN-SuQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--Dict Table View Controller-->
+        <scene sceneID="5Lg-Xy-x1I">
+            <objects>
+                <tableViewController id="2Ao-tJ-W4l" customClass="DictTableViewController" customModule="PlistToTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="64" sectionHeaderHeight="18" sectionFooterHeight="18" id="iZf-6m-0fz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DictCell" id="Szg-Yz-vMc">
+                                <rect key="frame" x="0.0" y="56" width="375" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Szg-Yz-vMc" id="AmT-7J-mFU">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2Ao-tJ-W4l" id="5eO-Hz-Wxa"/>
+                            <outlet property="delegate" destination="2Ao-tJ-W4l" id="2K7-fA-ePu"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0B-Tw-Aw7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="124"/>
         </scene>
     </scenes>
 </document>
